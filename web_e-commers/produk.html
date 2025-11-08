@@ -1,0 +1,1550 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MacBook Pro 14" - TechStore</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Reset dan Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary: #f59e0b;
+            --dark: #1f2937;
+            --light: #f8fafc;
+            --gray: #6b7280;
+            --gray-light: #e5e7eb;
+            --success: #10b981;
+            --danger: #ef4444;
+        }
+
+        body {
+            background-color: #f5f7fa;
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background-color: var(--secondary);
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 1px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .btn-large {
+            padding: 15px 30px;
+            font-size: 18px;
+        }
+
+        .section-title {
+            margin-bottom: 30px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: var(--primary);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            border-radius: 2px;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .top-header {
+            background-color: var(--dark);
+            color: white;
+            padding: 8px 0;
+            font-size: 14px;
+        }
+
+        .top-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-contact span {
+            margin-right: 20px;
+        }
+
+        .header-contact i {
+            margin-right: 5px;
+        }
+
+        .header-actions a {
+            margin-left: 15px;
+        }
+
+        .main-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo i {
+            color: var(--primary);
+            font-size: 28px;
+            margin-right: 10px;
+        }
+
+        .logo h1 {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--dark);
+        }
+
+        .logo span {
+            color: var(--primary);
+        }
+
+        .search-bar {
+            flex: 1;
+            max-width: 500px;
+            margin: 0 20px;
+            position: relative;
+        }
+
+        .search-bar input {
+            width: 100%;
+            padding: 12px 20px;
+            border-radius: 30px;
+            border: 1px solid #ddd;
+            font-size: 16px;
+            outline: none;
+        }
+
+        .search-bar button {
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 30px;
+            padding: 7px 15px;
+            cursor: pointer;
+        }
+
+        .header-icons {
+            display: flex;
+            align-items: center;
+        }
+
+        .icon-item {
+            position: relative;
+            margin-left: 20px;
+            cursor: pointer;
+            font-size: 20px;
+            color: var(--dark);
+        }
+
+        .icon-item:hover {
+            color: var(--primary);
+        }
+
+        .badge {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background-color: var(--danger);
+            color: white;
+            border-radius: 50%;
+            width: 18px;
+            height: 18px;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        nav {
+            background-color: var(--primary);
+        }
+
+        .nav-menu {
+            display: flex;
+            justify-content: center;
+        }
+
+        .nav-item {
+            position: relative;
+        }
+
+        .nav-link {
+            display: block;
+            padding: 15px 20px;
+            color: white;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+
+        .nav-link:hover {
+            background-color: var(--primary-dark);
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            padding: 20px 0;
+            background-color: white;
+            margin-bottom: 20px;
+        }
+
+        .breadcrumb ul {
+            display: flex;
+            align-items: center;
+        }
+
+        .breadcrumb li {
+            margin-right: 10px;
+            font-size: 14px;
+            color: var(--gray);
+        }
+
+        .breadcrumb li:not(:last-child)::after {
+            content: '>';
+            margin-left: 10px;
+        }
+
+        .breadcrumb li:last-child {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        /* Product Detail */
+        .product-detail {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 40px;
+        }
+
+        .product-container {
+            display: flex;
+            padding: 30px;
+        }
+
+        .product-gallery {
+            flex: 1;
+            max-width: 500px;
+        }
+
+        .main-image {
+            width: 100%;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f8fafc;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+
+        .main-image img {
+            max-width: 80%;
+            max-height: 80%;
+            transition: transform 0.3s;
+        }
+
+        .thumbnail-gallery {
+            display: flex;
+            gap: 10px;
+        }
+
+        .thumbnail {
+            width: 80px;
+            height: 80px;
+            border: 2px solid var(--gray-light);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f8fafc;
+            cursor: pointer;
+            transition: border-color 0.3s;
+        }
+
+        .thumbnail.active {
+            border-color: var(--primary);
+        }
+
+        .thumbnail img {
+            max-width: 90%;
+            max-height: 90%;
+        }
+
+        .product-info {
+            flex: 1;
+            padding-left: 40px;
+        }
+
+        .product-badge {
+            display: inline-block;
+            background-color: var(--danger);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .product-title {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        .product-rating {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .stars {
+            color: var(--secondary);
+            margin-right: 10px;
+        }
+
+        .rating-count {
+            color: var(--gray);
+            font-size: 14px;
+        }
+
+        .product-price {
+            margin-bottom: 20px;
+        }
+
+        .current-price {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-right: 15px;
+        }
+
+        .original-price {
+            font-size: 1.2rem;
+            color: var(--gray);
+            text-decoration: line-through;
+        }
+
+        .discount {
+            display: inline-block;
+            background-color: #fef3c7;
+            color: #92400e;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-left: 10px;
+        }
+
+        .product-description {
+            margin-bottom: 25px;
+            color: var(--gray);
+            line-height: 1.7;
+        }
+
+        .product-options {
+            margin-bottom: 25px;
+        }
+
+        .option-group {
+            margin-bottom: 20px;
+        }
+
+        .option-title {
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .option-values {
+            display: flex;
+            gap: 10px;
+        }
+
+        .option-value {
+            padding: 8px 15px;
+            border: 1px solid var(--gray-light);
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .option-value:hover {
+            border-color: var(--primary);
+        }
+
+        .option-value.active {
+            background-color: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        .quantity-selector {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .quantity-label {
+            margin-right: 15px;
+            font-weight: 600;
+        }
+
+        .quantity-controls {
+            display: flex;
+            align-items: center;
+            border: 1px solid var(--gray-light);
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .quantity-btn {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f8fafc;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .quantity-input {
+            width: 60px;
+            height: 40px;
+            text-align: center;
+            border: none;
+            border-left: 1px solid var(--gray-light);
+            border-right: 1px solid var(--gray-light);
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .product-actions {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .action-btn {
+            flex: 1;
+        }
+
+        .wishlist-btn {
+            width: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f8fafc;
+            border: 1px solid var(--gray-light);
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 20px;
+            color: var(--gray);
+            transition: all 0.3s;
+        }
+
+        .wishlist-btn:hover, .wishlist-btn.active {
+            color: var(--danger);
+            border-color: var(--danger);
+        }
+
+        .product-meta {
+            border-top: 1px solid var(--gray-light);
+            padding-top: 20px;
+        }
+
+        .meta-item {
+            display: flex;
+            margin-bottom: 10px;
+        }
+
+        .meta-label {
+            width: 120px;
+            font-weight: 600;
+        }
+
+        .meta-value {
+            flex: 1;
+        }
+
+        /* Tabs Section */
+        .product-tabs {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 40px;
+            overflow: hidden;
+        }
+
+        .tabs-header {
+            display: flex;
+            border-bottom: 1px solid var(--gray-light);
+        }
+
+        .tab-btn {
+            padding: 15px 25px;
+            background: none;
+            border: none;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .tab-btn.active {
+            color: var(--primary);
+        }
+
+        .tab-btn.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: var(--primary);
+        }
+
+        .tab-content {
+            padding: 30px;
+        }
+
+        .tab-pane {
+            display: none;
+        }
+
+        .tab-pane.active {
+            display: block;
+        }
+
+        .specs-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .specs-table tr {
+            border-bottom: 1px solid var(--gray-light);
+        }
+
+        .specs-table td {
+            padding: 12px 15px;
+        }
+
+        .specs-table td:first-child {
+            font-weight: 600;
+            width: 30%;
+        }
+
+        .review-item {
+            padding: 20px 0;
+            border-bottom: 1px solid var(--gray-light);
+        }
+
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .review-author {
+            font-weight: 600;
+        }
+
+        .review-date {
+            color: var(--gray);
+            font-size: 14px;
+        }
+
+        .review-rating {
+            color: var(--secondary);
+            margin-bottom: 10px;
+        }
+
+        /* Related Products */
+        .related-products {
+            margin-bottom: 60px;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .product-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: var(--danger);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+            z-index: 2;
+        }
+
+        .product-image {
+            height: 200px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f8fafc;
+        }
+
+        .product-image img {
+            max-width: 80%;
+            max-height: 80%;
+            transition: transform 0.5s;
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.1);
+        }
+
+        .product-info {
+            padding: 20px;
+        }
+
+        .product-category {
+            color: var(--gray);
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        .product-title {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .product-rating {
+            color: var(--secondary);
+            margin-bottom: 10px;
+        }
+
+        .product-price {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .current-price {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-right: 10px;
+        }
+
+        .original-price {
+            font-size: 1rem;
+            color: var(--gray);
+            text-decoration: line-through;
+        }
+
+        .product-actions {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a202c;
+            color: white;
+            padding: 60px 0 0;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column h3 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 40px;
+            height: 3px;
+            background-color: var(--primary);
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: #cbd5e0;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .footer-contact li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            color: #cbd5e0;
+        }
+
+        .footer-contact i {
+            margin-right: 10px;
+            color: var(--primary);
+            margin-top: 5px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: #2d3748;
+            border-radius: 50%;
+            transition: background-color 0.3s;
+        }
+
+        .social-links a:hover {
+            background-color: var(--primary);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #2d3748;
+            padding: 20px 0;
+            text-align: center;
+            color: #cbd5e0;
+            font-size: 14px;
+        }
+
+        .payment-methods {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .payment-methods i {
+            font-size: 30px;
+            color: #cbd5e0;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .product-container {
+                flex-direction: column;
+            }
+            
+            .product-info {
+                padding-left: 0;
+                padding-top: 30px;
+            }
+            
+            .product-gallery {
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .top-header .container {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .main-header .container {
+                flex-wrap: wrap;
+            }
+            
+            .logo {
+                margin-bottom: 15px;
+            }
+            
+            .search-bar {
+                order: 3;
+                max-width: 100%;
+                margin: 15px 0;
+            }
+            
+            .nav-menu {
+                flex-wrap: wrap;
+            }
+            
+            .product-actions {
+                flex-direction: column;
+            }
+            
+            .wishlist-btn {
+                width: 100%;
+                margin-top: 10px;
+                height: 50px;
+            }
+            
+            .tabs-header {
+                flex-wrap: wrap;
+            }
+            
+            .tab-btn {
+                flex: 1;
+                min-width: 120px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .product-title {
+                font-size: 1.5rem;
+            }
+            
+            .current-price {
+                font-size: 1.5rem;
+            }
+            
+            .option-values {
+                flex-wrap: wrap;
+            }
+            
+            .quantity-selector {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .quantity-label {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="top-header">
+            <div class="container">
+                <div class="header-contact">
+                    <span><i class="fas fa-phone"></i> (021) 1234-5678</span>
+                    <span><i class="fas fa-envelope"></i> info@techstore.com</span>
+                </div>
+                <div class="header-actions">
+                    <a href="#">Bantuan</a>
+                    <a href="#">Lacak Pesanan</a>
+                    <a href="#">Bahasa Indonesia</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="main-header">
+            <div class="container">
+                <div class="logo">
+                    <i class="fas fa-laptop"></i>
+                    <h1>Tech<span>Store</span></h1>
+                </div>
+                
+                <div class="search-bar">
+                    <input type="text" placeholder="Cari produk...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                
+                <div class="header-icons">
+                    <div class="icon-item">
+                        <i class="far fa-user"></i>
+                    </div>
+                    <div class="icon-item">
+                        <i class="far fa-heart"></i>
+                        <span class="badge">3</span>
+                    </div>
+                    <div class="icon-item">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="badge">5</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <nav>
+            <div class="container">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Laptop & Komputer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Smartphone & Tablet</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Aksesoris</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Promo</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <ul>
+                <li><a href="#">Beranda</a></li>
+                <li><a href="#">Laptop & Komputer</a></li>
+                <li><a href="#">Laptop</a></li>
+                <li><a href="#">Apple</a></li>
+                <li>MacBook Pro 14"</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Product Detail -->
+    <div class="container">
+        <div class="product-detail">
+            <div class="product-container">
+                <div class="product-gallery">
+                    <div class="main-image">
+                        <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=726&q=80" alt="MacBook Pro 14" id="main-image">
+                    </div>
+                    <div class="thumbnail-gallery">
+                        <div class="thumbnail active" data-image="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=726&q=80">
+                            <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=726&q=80" alt="MacBook Pro 14 - Front">
+                        </div>
+                        <div class="thumbnail" data-image="https://images.unsplash.com/photo-1541807084-5c52b6b3adef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80">
+                            <img src="https://images.unsplash.com/photo-1541807084-5c52b6b3adef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="MacBook Pro 14 - Side">
+                        </div>
+                        <div class="thumbnail" data-image="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80">
+                            <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80" alt="MacBook Pro 14 - Keyboard">
+                        </div>
+                        <div class="thumbnail" data-image="https://images.unsplash.com/photo-1587614382346-4ec70e388b28?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80">
+                            <img src="https://images.unsplash.com/photo-1587614382346-4ec70e388b28?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="MacBook Pro 14 - Display">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-info">
+                    <span class="product-badge">HOT</span>
+                    <h1 class="product-title">Apple MacBook Pro 14" M2 Pro Chip 10-core CPU 16-core GPU 16GB 1TB SSD</h1>
+                    
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="rating-count">(42 Ulasan)</div>
+                    </div>
+                    
+                    <div class="product-price">
+                        <span class="current-price">Rp 24.999.000</span>
+                        <span class="original-price">Rp 27.999.000</span>
+                        <span class="discount">11%</span>
+                    </div>
+                    
+                    <div class="product-description">
+                        <p>MacBook Pro 14 inci yang andal dan cepat dengan chip M2 Pro. Dibuat untuk para profesional yang membutuhkan performa tinggi untuk pekerjaan kreatif, pengembangan perangkat lunak, dan multitasking berat.</p>
+                    </div>
+                    
+                    <div class="product-options">
+                        <div class="option-group">
+                            <div class="option-title">Warna</div>
+                            <div class="option-values">
+                                <div class="option-value active" data-value="space-gray">Space Gray</div>
+                                <div class="option-value" data-value="silver">Silver</div>
+                            </div>
+                        </div>
+                        
+                        <div class="option-group">
+                            <div class="option-title">RAM</div>
+                            <div class="option-values">
+                                <div class="option-value active" data-value="16gb">16GB</div>
+                                <div class="option-value" data-value="32gb">32GB</div>
+                            </div>
+                        </div>
+                        
+                        <div class="option-group">
+                            <div class="option-title">Storage</div>
+                            <div class="option-values">
+                                <div class="option-value" data-value="512gb">512GB</div>
+                                <div class="option-value active" data-value="1tb">1TB</div>
+                                <div class="option-value" data-value="2tb">2TB</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="quantity-selector">
+                        <div class="quantity-label">Jumlah:</div>
+                        <div class="quantity-controls">
+                            <button class="quantity-btn" id="decrease-qty">-</button>
+                            <input type="text" class="quantity-input" value="1" id="quantity">
+                            <button class="quantity-btn" id="increase-qty">+</button>
+                        </div>
+                    </div>
+                    
+                    <div class="product-actions">
+                        <button class="btn btn-primary btn-large action-btn" id="add-to-cart">
+                            <i class="fas fa-shopping-cart"></i> Tambah ke Keranjang
+                        </button>
+                        <button class="btn btn-secondary btn-large action-btn" id="buy-now">
+                            Beli Sekarang
+                        </button>
+                        <button class="wishlist-btn" id="wishlist-toggle">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="product-meta">
+                        <div class="meta-item">
+                            <div class="meta-label">SKU:</div>
+                            <div class="meta-value">MBP14-M2-1TB</div>
+                        </div>
+                        <div class="meta-item">
+                            <div class="meta-label">Kategori:</div>
+                            <div class="meta-value">Laptop, Apple</div>
+                        </div>
+                        <div class="meta-item">
+                            <div class="meta-label">Stok:</div>
+                            <div class="meta-value"><span style="color: var(--success);">Tersedia</span> (15 unit)</div>
+                        </div>
+                        <div class="meta-item">
+                            <div class="meta-label">Pengiriman:</div>
+                            <div class="meta-value">Gratis ongkir ke seluruh Indonesia</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Product Tabs -->
+        <div class="product-tabs">
+            <div class="tabs-header">
+                <button class="tab-btn active" data-tab="description">Deskripsi</button>
+                <button class="tab-btn" data-tab="specs">Spesifikasi</button>
+                <button class="tab-btn" data-tab="reviews">Ulasan (42)</button>
+                <button class="tab-btn" data-tab="shipping">Pengiriman & Pengembalian</button>
+            </div>
+            
+            <div class="tab-content">
+                <div class="tab-pane active" id="description">
+                    <h3>Tentang Produk</h3>
+                    <p>MacBook Pro 14 inci dengan chip M2 Pro mengubah segalanya untuk laptop profesional. Dengan performa CPU dan GPU yang luar biasa, memori terpadu yang besar, dan bandwidth memori yang ditingkatkan, ini adalah laptop pro terbaik yang pernah ada.</p>
+                    
+                    <h4>Fitur Utama:</h4>
+                    <ul>
+                        <li>Chip M2 Pro dengan CPU 10-core dan GPU 16-core</li>
+                        <li>Layar Liquid Retina XDR 14,2 inci dengan ProMotion</li>
+                        <li>Memori 16GB terpadu</li>
+                        <li>Penyimpanan SSD 1TB yang super cepat</li>
+                        <li>Baterai tahan hingga 17 jam</li>
+                        <li>Konektivitas: Wi-Fi 6E, Thunderbolt 4, HDMI, SDXC</li>
+                        <li>Magic Keyboard dengan Touch ID</li>
+                    </ul>
+                    
+                    <h4>Apa yang Ada di Dalam Kotak:</h4>
+                    <ul>
+                        <li>MacBook Pro 14"</li>
+                        <li>Kabel pengisian daya USB-C to MagSafe 3 (2m)</li>
+                        <li>Adaptor daya USB-C 67W</li>
+                        <li>Dokumentasi</li>
+                    </ul>
+                </div>
+                
+                <div class="tab-pane" id="specs">
+                    <h3>Spesifikasi Teknis</h3>
+                    <table class="specs-table">
+                        <tr>
+                            <td>Layar</td>
+                            <td>Liquid Retina XDR 14,2 inci, 3024 x 1964 piksel</td>
+                        </tr>
+                        <tr>
+                            <td>Chip</td>
+                            <td>Apple M2 Pro (10-core CPU, 16-core GPU)</td>
+                        </tr>
+                        <tr>
+                            <td>Memori</td>
+                            <td>16GB terpadu</td>
+                        </tr>
+                        <tr>
+                            <td>Penyimpanan</td>
+                            <td>SSD 1TB</td>
+                        </tr>
+                        <tr>
+                            <td>Kamera</td>
+                            <td>1080p FaceTime HD</td>
+                        </tr>
+                        <tr>
+                            <td>Konektivitas</td>
+                            <td>Wi-Fi 6E, Bluetooth 5.3, 3x Thunderbolt 4, HDMI, SDXC, MagSafe 3</td>
+                        </tr>
+                        <tr>
+                            <td>Audio</td>
+                            <td>Sistem suara enam speaker dengan force-cancelling woofers</td>
+                        </tr>
+                        <tr>
+                            <td>Baterai</td>
+                            <td>Hingga 17 jam penelusuran web nirkabel</td>
+                        </tr>
+                        <tr>
+                            <td>Berat</td>
+                            <td>1,6 kg</td>
+                        </tr>
+                        <tr>
+                            <td>Dimensi</td>
+                            <td>31,26 x 22,12 x 1,55 cm</td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div class="tab-pane" id="reviews">
+                    <h3>Ulasan Pelanggan</h3>
+                    
+                    <div class="review-item">
+                        <div class="review-header">
+                            <div class="review-author">Andi Setiawan</div>
+                            <div class="review-date">15 Maret 2023</div>
+                        </div>
+                        <div class="review-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>Produk original, pengiriman cepat. Performa sangat memuaskan untuk editing video 4K. Baterai tahan lama sesuai klaim. Recommended!</p>
+                    </div>
+                    
+                    <div class="review-item">
+                        <div class="review-header">
+                            <div class="review-author">Sari Melati</div>
+                            <div class="review-date">10 Maret 2023</div>
+                        </div>
+                        <div class="review-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p>Layarnya sangat tajam dan warna akurat. Cocok untuk desain grafis. Harga sedikit mahal tapi worth it untuk kualitas yang didapat.</p>
+                    </div>
+                    
+                    <div class="review-item">
+                        <div class="review-header">
+                            <div class="review-author">Rizki Darmawan</div>
+                            <div class="review-date">5 Maret 2023</div>
+                        </div>
+                        <div class="review-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <p>Pengiriman agak lambat tapi produk sesuai ekspektasi. Performa sangat cepat untuk multitasking dan coding. Keyboard nyaman digunakan.</p>
+                    </div>
+                    
+                    <button class="btn btn-outline" style="margin-top: 20px;">Lihat Semua Ulasan</button>
+                </div>
+                
+                <div class="tab-pane" id="shipping">
+                    <h3>Kebijakan Pengiriman</h3>
+                    <p>Kami menawarkan pengiriman gratis untuk semua pesanan di atas Rp 1.000.000 ke seluruh Indonesia. Untuk pesanan di bawah nilai tersebut, biaya pengiriman akan disesuaikan dengan lokasi dan kurir yang dipilih.</p>
+                    
+                    <h4>Estimasi Pengiriman:</h4>
+                    <ul>
+                        <li>Jabodetabek: 1-2 hari kerja</li>
+                        <li>Jawa dan Bali: 2-4 hari kerja</li>
+                        <li>Sumatera, Kalimantan, Sulawesi: 3-5 hari kerja</li>
+                        <li>Indonesia Timur: 4-7 hari kerja</li>
+                    </ul>
+                    
+                    <h3>Kebijakan Pengembalian</h3>
+                    <p>Kami menerima pengembalian dalam waktu 14 hari setelah produk diterima dengan syarat:</p>
+                    <ul>
+                        <li>Produk dalam kondisi seperti baru</li>
+                        <li>Semua aksesori dan kemasan asli lengkap</li>
+                        <li>Label harga dan segel masih utuh</li>
+                        <li>Dilengkapi dengan bukti pembelian</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Related Products -->
+        <div class="related-products">
+            <h2 class="section-title">Produk Terkait</h2>
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <span class="product-badge">DISKON</span>
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80" alt="iPhone 14">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Smartphone</div>
+                        <h3 class="product-title">iPhone 14 Pro Max 256GB</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(67)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">Rp 18.999.000</span>
+                            <span class="original-price">Rp 22.299.000</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn btn-primary">Tambah</button>
+                            <button class="btn btn-outline"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Headphones">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Audio</div>
+                        <h3 class="product-title">Sony WH-1000XM4</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(38)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">Rp 3.499.000</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn btn-primary">Tambah</button>
+                            <button class="btn btn-outline"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <span class="product-badge">BARU</span>
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1606983340126-99ab4feaa64a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1024&q=80" alt="iPad Pro">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Tablet</div>
+                        <h3 class="product-title">iPad Pro 12.9" 128GB</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(29)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">Rp 15.999.000</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn btn-primary">Tambah</button>
+                            <button class="btn btn-outline"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1593640408182-31c70c8268f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1142&q=80" alt="MacBook Air">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Laptop</div>
+                        <h3 class="product-title">MacBook Air M2 13" 256GB</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(51)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">Rp 17.999.000</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn btn-primary">Tambah</button>
+                            <button class="btn btn-outline"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>TechStore</h3>
+                    <p>Toko elektronik online terpercaya dengan berbagai produk berkualitas dan harga terjangkau.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Kategori</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Laptop & Komputer</a></li>
+                        <li><a href="#">Smartphone & Tablet</a></li>
+                        <li><a href="#">Perangkat Audio</a></li>
+                        <li><a href="#">Kamera & Drone</a></li>
+                        <li><a href="#">Aksesoris Elektronik</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Bantuan</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Cara Berbelanja</a></li>
+                        <li><a href="#">Pembayaran</a></li>
+                        <li><a href="#">Pengiriman</a></li>
+                        <li><a href="#">Pengembalian</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Kontak Kami</h3>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Jl. Teknologi No. 123, Jakarta Selatan, Indonesia</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>(021) 1234-5678</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>info@techstore.com</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <span>Senin - Minggu: 08.00 - 22.00 WIB</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 TechStore. All rights reserved.</p>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                    <i class="fab fa-cc-amazon-pay"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Thumbnail Gallery
+        document.querySelectorAll('.thumbnail').forEach(thumb => {
+            thumb.addEventListener('click', function() {
+                // Update main image
+                const mainImage = document.getElementById('main-image');
+                mainImage.src = this.getAttribute('data-image');
+                
+                // Update active thumbnail
+                document.querySelectorAll('.thumbnail').forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+        
+        // Quantity Selector
+        const quantityInput = document.getElementById('quantity');
+        document.getElementById('increase-qty').addEventListener('click', function() {
+            quantityInput.value = parseInt(quantityInput.value) + 1;
+        });
+        
+        document.getElementById('decrease-qty').addEventListener('click', function() {
+            if (parseInt(quantityInput.value) > 1) {
+                quantityInput.value = parseInt(quantityInput.value) - 1;
+            }
+        });
+        
+        // Product Options
+        document.querySelectorAll('.option-value').forEach(option => {
+            option.addEventListener('click', function() {
+                const optionGroup = this.closest('.option-group');
+                optionGroup.querySelectorAll('.option-value').forEach(opt => opt.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+        
+        // Tabs
+        document.querySelectorAll('.tab-btn').forEach(tab => {
+            tab.addEventListener('click', function() {
+                // Update active tab button
+                document.querySelectorAll('.tab-btn').forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Show corresponding tab content
+                const tabId = this.getAttribute('data-tab');
+                document.querySelectorAll('.tab-pane').forEach(pane => pane.classList.remove('active'));
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+        
+        // Wishlist Toggle
+        document.getElementById('wishlist-toggle').addEventListener('click', function() {
+            this.classList.toggle('active');
+            const icon = this.querySelector('i');
+            if (this.classList.contains('active')) {
+                icon.classList.remove('far');
+                icon.classList.add('fas');
+            } else {
+                icon.classList.remove('fas');
+                icon.classList.add('far');
+            }
+        });
+        
+        // Add to Cart
+        document.getElementById('add-to-cart').addEventListener('click', function() {
+            const badge = document.querySelector('.fa-shopping-cart').parentElement.querySelector('.badge');
+            let count = parseInt(badge.textContent);
+            badge.textContent = count + parseInt(quantityInput.value);
+            
+            // Show notification
+            alert('Produk telah ditambahkan ke keranjang!');
+        });
+        
+        // Buy Now
+        document.getElementById('buy-now').addEventListener('click', function() {
+            alert('Fungsi Beli Sekarang akan mengarahkan ke halaman checkout.');
+        });
+    </script>
+</body>
+</html>
